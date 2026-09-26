@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <title>强感应光电感知技术驱动下的轨交监测模组</title>
+    <style>
+        /* 添加样式让 logo 和标题水平排列 */
+       .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+       .logo {
+            margin-right: 20px;
+            max-width: 150px; /* 根据实际情况调整 logo 的最大宽度 */
+            height: auto;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 font-sans">
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <!-- 替换为你的 logo 图片路径 -->
+                <img class="logo" src="images\logo.jpg" alt="Logo">
+                <h1>强感应光电感知技术驱动下的轨交监测模组</h1>
+            </div>
+        </div>
+    </header>
+    <main class="container flex-grow">
+        <div class="date-picker-container">
+            <label for="datePicker">选择日期:</label>
+            <input type="date" id="datePicker" class="mt-1 block w-full" value="2026-01-01">
+        </div>
+        <div id="results" class="bg-white p-6 rounded-md shadow-md overflow-x-auto">
+            <table class="w-full border-collapse table-auto">
+                <thead>
+                    <tr>
+                        <th>状态</th>
+                        <th>次数</th>
+                        <th>最低燃弧度状态评分</th>
+                        <th>平均燃弧度状态评分</th>
+                        <th>最长发生时间</th>
+                        <th>平均发生时间</th>
+                        <th class="hidden-column">发生时间区间</th>
+                    </tr>
+                </thead>
+                <tbody id="resultTableBody">
+                    <!-- 这里会动态插入查询结果 -->
+                </tbody>
+            </table>
+        </div>
+        <div id="image-container" class="image-container">
+            <!-- 这里预留放置图片的位置 -->
+        </div>
+    </main>
+    <!-- 图片模态框 -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
